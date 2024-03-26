@@ -131,13 +131,14 @@ def profile(request):
     currentuser=request.user.username
     items=Orders.objects.filter(email=currentuser)
     rid=""
+
     for i in items:
         print(i.oid)
         # print(i.order_id)
         myid=i.oid
         rid=myid.replace("ShopyCart","")
         print(rid)
-    status=OrderUpdate.objects.filter(order_id=int(rid))
+    status=OrderUpdate.objects.filter(order_id=int(1))
     for j in status:
         print(j.update_desc)
 

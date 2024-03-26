@@ -51,13 +51,13 @@
           <li class="dropdown">
             <a class="nav-link scrollto" href="#">Product</a>
             <ul class="dropdown-menu">
-                <li><a href="/">All</a></li>
+                <li><a href="{% url 'index'%}#portfolio">All</a></li>
                 <li><a href="#">Category 1</a></li>
                 <li><a href="#">Category 2</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="/checkout">Checkout</a></li>
-          <li><a class="nav-link scrollto" href="/profile">My Profile<i class="fa-regular fa-square-user"></i> </a></li>
+          <li><a class="nav-link scrollto" href="/checkout">Payment</a></li>
+          <li><a class="nav-link scrollto" href="/profile">Order status<i class="fa-regular fa-square-user"></i> </a></li>
 
           <button type="button" class="nav-link scrollto bg-danger p-3 m-2 text-white" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" ><i class="fa-solid fa-cart-shopping"></i>  Cart (<span id="cart">0</span>)
           </button>
@@ -92,7 +92,7 @@
 
 
 
-          <li><a class="nav-link scrollto bg-dark p-3 m-2" href="/contact">Contact <i class="fa-solid fa-message-middle"></i></a></li>
+          <li><a class="nav-link scrollto bg-dark p-3 m-2" href="/contact">Help <i class="fa-solid fa-message-middle"></i></a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
