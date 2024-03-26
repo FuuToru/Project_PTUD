@@ -11,7 +11,7 @@ class Contact(models.Model):
     def __int__(self):
         return self.id
 
-
+ 
 class Product(models.Model):
     product_id = models.AutoField
     product_name = models.CharField(max_length=100)

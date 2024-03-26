@@ -1,0 +1,46 @@
+
+{% extends 'base.html' %}
+{% block title %}
+Product Detail
+{% endblock title %} 
+{% block content %}
+
+<h1>Welcome to Ecommerce shop</h1>
+<div class="wrap">
+  <div class="search">
+     <input type="text" class="searchTerm" placeholder="What are you looking for?">
+     <button type="submit" class="searchButton">
+       <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>
+
+
+{% endblock content %} 
+{% block body %}
+    <!-- Add more product details here as needed -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="/media/{{ product.image }} "  alt="..." /></div>
+                <div class="col-md-6">
+                    {% comment %} <div class="small mb-1">SKU: BST-498</div> {% endcomment %}
+                    <h1 class="display-5 fw-bolder">{{ product.product_name }}</h1>
+                    <div class="fs-5 mb-5">
+                        {% comment %} <span class="text-decoration-line-through">{{product.price}}</span> {% endcomment %}
+                        <span>${{product.price}}</span>
+                    </div>
+                    <p class="lead">{{ product.desc }} </p>
+                    <div class="d-flex">
+                        <span id="divpr{{ product.product_id }}" class="divpr">
+                            <button id="pr{{ product.product_id }}" class="btn btn-danger cart btn-sm mt-0">
+                              AddToCart <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                          </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}
